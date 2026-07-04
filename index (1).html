@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sukar - Portfolio</title>
+    <link rel="stylesheet" href="style.css"> <!-- YE LINE NAYI HAI -->
+</head>
+<body>
+    <img src="sukar.jpg" alt="Sukar ki Photo" class="profile-pic">
+    <h1>Namaste Sir 🙏</h1>
+    <p>Main sukar hun. B.A. Pol Science + Web Developer</p>
+    
+    <button onclick="changeBackground()">Click Karo</button>
+    <button onclick="toggleDarkMode()">Dark Mode</button>
+
+    <div class="skills">
+        <h2>Meri Skills</h2>
+        <p>✅ HTML & CSS</p>
+        <p>✅ Political Science</p>
+        <p>✅ JavaScript Sikh Raha Hun</p>
+    </div>
+
+    <p id="time"></p>
+
+    <div class="articles">
+        <h2>Mere Articles</h2>
+        
+        <div class="article-card">
+            <h3><a href="tunnel29.html">Tunnel 29: Berlin Wall Ki Sabse Badi Surang</a></h3>
+            <p>1962 mein 123 log kaise East Berlin se West bhaage. Ek raat, ek surang, aur azadi ki keemat...</p>
+            <span class="tag">History</span>
+            <span class="tag">Cold War</span>
+        </div>
+
+        <div class="article-card">
+            <h3><a href="geopolitics.html">Geopolitics Kya Hai? Aasan Bhasha Mein</a></h3>
+            <p>Desh bina yudh ke ek dusre ko kaise control karte hain? Samjho map, tel, aur taakat ka khel...</p>
+            <span class="tag">Politics</span>
+            <span class="tag">Geopolitics</span>
+        </div>
+    </div>
+
+<script>
+    function showTime() {
+        let now = new Date();
+        let timeString = now.toLocaleTimeString('hi-IN');
+        document.getElementById('time').innerHTML = 'Abhi ka time: ' + timeString;
+    }
+    
+    function changeBackground() {
+        document.body.style.background = 'linear-gradient(to right, #f093fb, #f5576c)';
+        showTime();
+        alert('Rang badal gaya sir! 🎨');
+    }
+    
+    function toggleDarkMode() {
+        document.body.classList.toggle('dark');
+    }
+    showTime();
+    setInterval(showTime, 1000); // Har 1 sec pe time update hoga
+</script>
+</body>
+</html>
